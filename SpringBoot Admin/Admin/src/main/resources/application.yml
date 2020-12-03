@@ -1,0 +1,25 @@
+server:
+  port: 9000
+
+spring:
+  application:
+    name: admin #指定服务名
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.40.238:8848
+
+  security:
+    user:
+      name: root
+      password: root
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*' #暴露所有的 actuator 端点信息重
+  endpoint:
+    health:
+      show-details: always
+
